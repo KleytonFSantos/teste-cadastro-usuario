@@ -5,6 +5,12 @@
 - Desenvolva um sistema de cadastro de usuários. O sistema deve coletar o nome do usuário, email e a senha do usuario. 
 - Utilize **HTML** para a interface, **JavaScript** para validação no lado do cliente e **PHP** para processar e armazenar os dados no servidor (usando um banco de dados PostgreSQL ou MySQL).
 
+## O que será avaliado:
+
+- Conhecimento básico em javascript
+- Conhecimento básico em html e css
+- Conhecimento básico em php
+- Conhecimento básico em banco de dados
 
 ## Requisitos
 
