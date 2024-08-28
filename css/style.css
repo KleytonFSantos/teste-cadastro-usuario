@@ -66,6 +66,9 @@ body {
 .text-bold{
     font-weight: bold;
 }
+.text-regular{
+    font-weight: normal;
+}
 
 input,
 textarea {

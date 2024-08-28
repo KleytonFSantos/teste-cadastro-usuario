@@ -30,7 +30,7 @@
                                 </div>
                             </div>
                             <!-- Lado Direito -->
-                            <div class="col-lg-8 col-12 col-xl-7">
+                            <div id="lado-direito" class="col-lg-8 col-12 col-xl-7">
                                 <div class="col">
                                     <div class="row">
                                         <div class="w-100">
@@ -79,7 +79,7 @@
                                                                 <div class="mt-3">
                                                                     <div class="main_div">
                                                                         <div class="input-group">
-                                                                            <input type="email" required="required" class="form-password" id="email" name="email" >
+                                                                            <input type="email" required="required" class="form-password" id="email" name="email">
                                                                             <label for="email">Email</label>
                                                                         </div>
                                                                     </div>
@@ -127,5 +127,51 @@
         </div>
     </div>
     <script src="js/main.js"></script>
+    <script>
+document.getElementById('userForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    var formData = new FormData(this);
+
+    fetch('php/config.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        if (data === 'Usuário cadastrado com sucesso!') {
+            document.getElementById('lado-direito').innerHTML = `
+            <div class="text-center mt-5">
+                <span class="text-32 text-bold dark-blue">Usuário cadastrado com sucesso!</h2>
+                <p id="timer" class="text-16 light-blue text-regular pt-2">A página será recarregada em <span id="countdown">4</span> segundos.</p>
+            </div>
+            `;
+
+            function startCountdown(seconds) {
+                var countdownElement = document.getElementById('countdown');
+                var timer = seconds;
+
+                var interval = setInterval(function() {
+                    if (timer <= 0) {
+                        clearInterval(interval);
+                        location.reload();
+                    } else {
+                        countdownElement.textContent = timer;
+                        timer--;
+                    }
+                }, 1000);
+            }
+
+            
+            startCountdown(4);
+
+        } else {
+            alert(data);
+        }
+    })
+    .catch(error => console.error('Erro:', error));
+});
+
+    </script>
 </body>
 </html>
