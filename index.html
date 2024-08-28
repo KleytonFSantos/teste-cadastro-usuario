@@ -4,23 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Usuário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Cadastro de Usuário</h1>
-        <form id="userForm" action="php/config.php" method="POST">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required><br>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
-
-            <label for="senha">Senha:</label>
-            <input type="number" id="senha" name="senha" required><br>
-
-            <button type="submit">Enviar</button>
-        </form>
+        <div class="row">
+            <div class="col">
+                <div class="p-0">
+                    <div class="card-body">
+                        <div class="row p-0">
+                            <!-- Lado Esquerdo -->
+                            <div class="col-xl-5 col-lg-4 col-xl-5 d-md-block d-flex align-items-center">
+                                <div class="card h-100 w-100 d-flex flex-column justify-content-between d-lg-flex flex-column flex-lg-row">
+                                    <div class="d-flex flex-column flex-md-column flex-sm-row">
+                                        <div class="col px-5 d-flex align-items-center">
+                                            <img src="images/logo.svg" alt="Logo Vox Tecnologia" width="100" height="100">
+                                        </div>
+                                        <div class="col p-0 mt-5 d-none d-lg-block align-bottom">
+                                            <img src="images/sou-voz-tec.png" alt="Logo Vox Tecnologia">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Lado Direito -->
+                            <div class="col-lg-8 col-12 col-xl-7">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="w-100">
+                                            <div class="row pt-3 ps-3 ps-md-2">
+                                                <div class="col-12 col-md-8 col-lg-8 mx-lg-auto">
+                                                    <div class="row">
+                                                        <div class="row d-flex align-items-center">
+                                                            <div class="col-auto">
+                                                                <!-- Título -->
+                                                                <div class="row">
+                                                                    <span class="text-32 dark-blue text-bold">Cadastro de Usuário</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-auto align-items-center">
+                                                                <!-- Aviso -->
+                                                                <div class="row mx-auto my-2">
+                                                                    <div class="col-auto bg-vox-blue">
+                                                                        <span class="text-12">Homologação</span>
+                                                                    </div>
+                                                                    <div class="col-auto bg-vox-blue-alt">
+                                                                        <span class="text-12 light-blue">Utilize dados fictícios para testes.</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr class="mt-3 mx-auto" style="width:50%;">
+                                            <!-- Formulário -->
+                                            <form id="userForm" action="php/config.php" method="POST">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-lg-8 col-12">
+                                                        <div class="row ps-3">
+                                                            <div class="col-12 p-0">
+                                                                <div class="mt-3">
+                                                                    <div class="main_div">
+                                                                        <div class="input-group">
+                                                                            <input type="text" required="required" class="form-password" id="nome" name="nome">
+                                                                            <label for="nome">Nome Completo</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- Email -->
+                                                                <div class="mt-3">
+                                                                    <div class="main_div">
+                                                                        <div class="input-group">
+                                                                            <input type="email" required="required" class="form-password" id="email" name="email" >
+                                                                            <label for="email">Email</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- Senha -->
+                                                                <div class="mt-3">
+                                                                    <div class="main_div">
+                                                                        <div class="input-group">
+                                                                            <input type="number" class="form-password" id="senha" name="senha" required="">
+                                                                            <label for="senha" class="form-label">Senha:</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- Botão de Enviar -->
+                                                                <div class="p-1 mt-3">
+                                                                    <div class="main_div">
+                                                                        <div class="row">
+                                                                            <div class="col text-center">
+                                                                                <button type="submit" class="button-submit">Criar conta</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <!-- Footer -->
+                                            <div class="row d-flex justify-content-center align-items-center p-4">
+                                                <div class="col-auto footer text-center">
+                                                    <a href="https://github.com/JheymersonLA" target="_blank" class="footer-link">
+                                                        <i class="fab fa-github"></i> Made by Jheymerson
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="js/main.js"></script>
 </body>
