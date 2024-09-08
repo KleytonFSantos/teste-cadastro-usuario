@@ -1,15 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Usuário</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
+    <div class="container">
+        <div id="imagem">
+            <img src="https://media.istockphoto.com/vectors/people-signing-up-or-login-to-online-account-with-user-interface-vector-id1428848476?k=20&m=1428848476&s=170667a&w=0&h=x6BcBopDF5XV8GnZ1-sZQwLeHSbe2wfNaXtlbQnrNyk=">
+        </div>
+        <div class="form">
+            <form>
+                <div class="formTitle">
+                    <h1><font color ="#F5F5F5">Cadastre-se aqui!</font></h1>
+                </div>
 
-</div>
-<script src="js/main.js"></script>
+                    <div class="entradaDados">
+                        <label for="Nome"><font color ="#F5F5F5">Nome completo</font></label>
+                        <input type="text" name="nome" placeholder="Digite seu nome" id="nome" required>
+                    </div>
+    
+                    <div class="entradaDados">
+                        <label for="Email"><font color ="#F5F5F5">Email</font></label>
+                        <input type="Email" name="Email" placeholder="Digite seu Email" id="Email" required >
+                    </div>
+    
+                    <div class="entradaDados">
+                        <label for="password"><font color ="#F5F5F5">Senha</font></label>
+                        <input type="password" name="password" placeholder="Digite sua senha" id="password" required>
+                    </div>
+    
+                    <div class="cadButton">
+                        <button onclick="cadastrar()"><a href=""><font color ="#000000">Enviar</font></a></button>
+                        
+                    </div>
+            </form>
+        </div>
+
+    </div>
+    <script src="script.js"></script> 
 </body>
 </html>

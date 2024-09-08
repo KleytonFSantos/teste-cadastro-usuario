@@ -1,0 +1,56 @@
+body {
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-items: center;
+}
+
+#imagem{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.form{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #6b8ad7;
+}
+
+.entradaDados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1.1rem;
+    flex-direction: column;
+}
+
+.entradaDados input{
+    margin: 0.6rem;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 1.2rem;   
+}
+
+.cadButton button{
+    width: 50%;
+    height: 25px;
+    border: none;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    justify-content: center;
+    margin-left: 60px;
+    margin-right: 55px;
+}
